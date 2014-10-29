@@ -19,13 +19,13 @@ setup(
 	keywords = "example documentation tutorial",
 	url = "https://github.com/astronouth7303/couchcusion-py",
 	packages=find_packages(),
-	long_description=read('README'),
 	# classifiers=[
 	#	 "Development Status :: 3 - Alpha",
 	#	 "Topic :: Utilities",
 	#	 "License :: OSI Approved :: BSD License",
 	# ],
-	setup_requires = [ "setuptools_git >= 0.3", ],
+	install_requires = [ 'requests' ],
+	setup_requires = [ "setuptools_git >= 0.3", 'requests' ],
 	entry_points = {
 		# "distutils.commands": [
 		# 	"foo = mypackage.some_module:foo",

@@ -16,10 +16,11 @@ in your ``setup.py`` and CouchDB is configured when you run ``install`` or
 				'myscript.py',
 				'mypackage',
 			],
-			'handlers': {
-				'_spam': 'eggs.py',
+			'statics': {
+				'_spam': 'mydir',
 				'_foo': 'bar.quux',
 			},
+			'config_file': 'myfile.ini',
 		},
 		...
 	)
