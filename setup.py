@@ -14,9 +14,9 @@ setup(
 	author = "Jamie Bliss",
 	author_email = "astronouth7303@gmail.com",
 	description = "Installation tool for CouchDB server-side components",
-	long_description=read('README.rst')
+	long_description=read('README.rst'),
 	# license = "BSD",
-	keywords = "example documentation tutorial",
+	# keywords = "example documentation tutorial",
 	url = "https://github.com/astronouth7303/couchcusion-py",
 	packages=find_packages(),
 	# classifiers=[
@@ -27,11 +27,12 @@ setup(
 	install_requires = [ 'requests' ],
 	setup_requires = [ "setuptools_git >= 0.3", 'requests' ],
 	entry_points = {
-		# "distutils.commands": [
-		# 	"foo = mypackage.some_module:foo",
-		# ],
+		"distutils.commands": [
+			"install = couchcushion.setuptools:install",
+			"develop = couchcushion.setuptools:develop",
+		],
 		"distutils.setup_keywords": [
-			"couchdb = couchcushion:validate_config",
+			"couchdb = couchcushion.setuptools:validate_config",
 		],
 	},
 )
